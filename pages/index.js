@@ -13,7 +13,7 @@ export default function Home({ pokemans }) {
 }
 
 export async function getServerSideProps() {
-  const id = Math.floor(Math.random() * 100);
+  const id = 1;
 
   const [pokemanRes, speciesRes] = await Promise.all([
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`),

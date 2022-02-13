@@ -15,6 +15,10 @@
 .image {
   position: relative;
 }
+.mxAuto {
+  width: 300px;
+  height: 300px;
+}
 .card {
   background: #fff;
   width: 90px;

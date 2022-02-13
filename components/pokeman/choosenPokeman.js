@@ -9,7 +9,7 @@ const ChoosenPokeman = ({ name, weight, height, image }) => {
           height / 10
         }m `}</div>
 
-        <img className="mx-auto" src={image} alt={name} />
+        <img className={styles.mxAuto} src={image} alt={name} />
 
         <div className={`${styles.widthCard} ${styles.card}`}>{` ${
           weight / 10

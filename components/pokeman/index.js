@@ -5,32 +5,13 @@ import PokemanCards from "./pokemanCards";
 import styles from "./Styles.module.css";
 
 const Pokeman = ({ pokemans }) => {
-  const [newPok, setNewPok] = useState([]);
   const { name, weight, height, image, stats, id } = pokemans;
+  const [random, setRandom] = useState(id);
 
-  const handleChange = () => {
-    let cards = pokemans;
-    const newHand = [];
-
-    function get_rand() {
-      let rand = Math.floor(Math.random() * 100);
-      if (
-        !newHand ||
-        (typeof newHand === "string" && !newHand.includes(rand))
-      ) {
-        newHand.push(rand);
-      } else {
-        get_rand(cards);
-      }
-    }
-
-    // for (let i = 0; i < 5; i++) {
-    //   get_rand(cards);
-    // }
-
-    get_rand(cards);
-    setNewPok(newHand);
-    console.log(newHand);
+  const handleRandom = () => {
+    let newId = Math.floor(Math.random() * 100);
+    setRandom(newId);
+    console.log("newId", newId);
   };
 
   return (
@@ -42,7 +23,7 @@ const Pokeman = ({ pokemans }) => {
         image={image}
       />
       <PokemanCards stats={stats} />
-      <button className={styles.btn} onClick={handleChange}>
+      <button className={styles.btn} onClick={handleRandom}>
         GOTCHA!
         <img
           className={styles.iconImg}
