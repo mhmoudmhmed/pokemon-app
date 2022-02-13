@@ -1,0 +1,161 @@
+.container {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+/* choosen pokeman style */
+.pokemanWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.image {
+  position: relative;
+}
+.card {
+  background: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 85px;
+  box-shadow: 0px 33px 56px #00000029;
+  font-size: 16px;
+  font-weight: bold;
+  color: #9b9898;
+}
+.heightCard {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.widthCard {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.name {
+  font-size: 25px;
+  font-weight: bold;
+  color: #9b9898;
+}
+.name::first-letter {
+  text-transform: capitalize;
+}
+/* pokeman card style */
+.cardsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.li {
+  position: relative;
+  margin-bottom: 30px;
+}
+.cardShadow {
+  background: #fff;
+  box-shadow: 0px 3px 20px #0000000d;
+  text-align: center;
+}
+.statsNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 180px;
+  border-radius: 32px;
+  text-align: center;
+  line-height: 76px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+}
+.statsName {
+  height: 75px;
+  line-height: 75px;
+  font-size: 14px;
+  color: #9999a1;
+  border-radius: 22px;
+  position: absolute;
+  width: 70%;
+  bottom: -35px;
+  left: 8%;
+}
+.statsName::first-letter {
+  text-transform: capitalize;
+}
+
+/* btn style */
+.btn {
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  background: #f0f0f0;
+  border-radius: 0px 69px 69px 0px;
+  border: 0;
+  padding: 25px 159px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #222224;
+  font-size: 20px;
+  position: relative;
+}
+
+.iconImg {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: -15px;
+  top: -11px;
+}
+
+/* media */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .list {
+    gap: 60px;
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 40%);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .cardsWrapper {
+    justify-content: center;
+  }
+  .list {
+    grid-template-columns: repeat(2, 50%);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    padding: 13px 75px;
+  }
+  .iconImg {
+    width: 65px;
+    height: 65px;
+    left: -12px;
+    top: -8px;
+  }
+}
