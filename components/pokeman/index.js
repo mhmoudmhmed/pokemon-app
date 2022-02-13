@@ -4,15 +4,8 @@ import ChoosenPokeman from "./choosenPokeman";
 import PokemanCards from "./pokemanCards";
 import styles from "./Styles.module.css";
 
-const Pokeman = ({ pokemans }) => {
+const Pokeman = ({ pokemans, handleRandom }) => {
   const { name, weight, height, image, stats, id } = pokemans;
-  const [random, setRandom] = useState(id);
-
-  const handleRandom = () => {
-    let newId = Math.floor(Math.random() * 100);
-    setRandom(newId);
-    console.log("newId", newId);
-  };
 
   return (
     <div className={styles.container}>
@@ -23,7 +16,7 @@ const Pokeman = ({ pokemans }) => {
         image={image}
       />
       <PokemanCards stats={stats} />
-      <button className={styles.btn} onClick={handleRandom}>
+      <button className={styles.btn} onClick={() => handleRandom(id)}>
         GOTCHA!
         <img
           className={styles.iconImg}
